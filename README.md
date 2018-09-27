@@ -1,2 +1,4 @@
-# SystemDeRecommendation
-This recommender system is based on the netflix recommendation system and was written in Java. This project was written in 2014 as a mini project along my studies at the EPFL in Lausanne.
+# Système de Recommendation
+
+This project was written in Java and submitted as an assignment for the course "Introduction à la Programmation" at the EPFL in 2014.   
+The assignment consisted in creating a recommender system as used in Netflix. The project description can be found in [recommendation-sytem-fr.pdf]() and the source file in [src/assignment/Recommendation.java]().
