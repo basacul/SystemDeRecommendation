@@ -5,24 +5,24 @@ import java.util.Random;
 public class Recommendation {
 
 	/*
-	 * Inscrivez votre nom complet (pr�nom et nom de famille)
-	 * ainsi que votre num�ro sciper ci-dessous :
+	 * Inscrivez votre nom complet (prénom et nom de famille)
+	 * ainsi que votre numéro sciper ci-dessous :
 	 */
 	
 	/* Etudiant 1 */
 	public static String NAME1 = "Lucas Antelo Blanco";
 	public static int SCIPER1 = 235644;
 	
-	/* Etudiant 2 - laissez tel quel si vous avez cod� le projet tout seul */
-	public static String NAME2 = "Philippe Z�rcher";
-	public static int SCIPER2 = 249938;
+	/* Etudiant 2 - laissez tel quel si vous avez cod le projet tout seul */
+	public static String NAME2 = "";
+	public static int SCIPER2 = 0;
 	
 	static Random random = new Random();
 	
 	
 	public static String matrixToString(double[][] A) 
 	{
-		/* M�thode � coder */
+		/* Méthode à coder */
 		String matrix = "{";
 		
 		for(int i = 0; i < A.length; ++i)
@@ -71,7 +71,7 @@ public class Recommendation {
 	}
 	
 	public static double[][] multiplyMatrix(double[][] A, double[][] B) { //U 5x2 and V 2x5
-		/* M�thode � coder */
+		/* Méthode à coder */
 		
 		double[][] mat = null;
 		
@@ -110,7 +110,7 @@ public class Recommendation {
 	}
 	
 	public static double[][] createMatrix( int n, int m, int k, int l) {
-		/* M�thode � coder */
+		/* Méthode à coder */
 		/* Utilisez la variable 'random', par exemple */
 		
 		double[][] matrix = new double[n][m];
@@ -147,7 +147,7 @@ public class Recommendation {
 	
 	public static double rmse(double[][] M, double[][] P) { 
 		// P = UxV
-		/* M�thode � coder */	
+		/* Méthode à coder */	
 		
 		boolean test = isMatrix(M) && isMatrix(P) && M[0].length == P[0].length && M.length == P.length;
 		double value = 0;
@@ -179,7 +179,7 @@ public class Recommendation {
 	
 	public static double updateUElem( double[][] M, double[][] U, double[][] V, int r, int s ) {
 		//r: row of u and s:row of v
-		/* M�thode � coder */ 
+		/* Méthode à coder */ 
 		
 		
 		boolean test = isMatrix(M) && isMatrix(U) && isMatrix(V) && V.length == U[0].length && U.length == M.length && V[0].length == M[0].length;
@@ -235,7 +235,7 @@ public class Recommendation {
 	}
 	
 	public static double updateVElem( double[][] M, double[][] U, double[][] V, int r, int s ) {
-		/* M�thode � coder */	
+		/* Méthode à coder */	
 		boolean test = isMatrix(M) && isMatrix(U) && isMatrix(V) &&  V.length == U[0].length && M.length == U.length && M[0].length == V[0].length;
 		
 		double num = 0;
@@ -287,7 +287,7 @@ public class Recommendation {
 	}
 	
 	public static double[][] optimizeU( double[][] M, double[][] U, double[][] V) {
-		/* M�thode � coder */	
+		/* Méthode à coder */	
 		//This method modifies the arrays directly in a way, that the output is exactly the modified arrays and the programm continues to work with the modified
 		//ones instead of the original matrix U.I talked with Barbara Jobstmann and she gave me the permission to do this.
 		
@@ -321,7 +321,7 @@ public class Recommendation {
 	}
 
 	public static double[][] optimizeV( double[][] M, double[][] U, double[][] V) {//Stop optimization when the difference of rmse between M and P is 10E-6
-		/* M�thode � coder */	
+		/* Méthode à coder */	
 		//This method modifies the arrays directly in a way, that the output is exactly the modified arrays and the programm continues to work with the modified
 		//ones instead of the original matrix U.I talked with Barbara Jobstmann and she gave me the permission to do this.
 		
@@ -354,7 +354,7 @@ public class Recommendation {
 	}
 	
 	public static int[] recommend( double[][] M, int d) {
-		/* M�thode � coder */	
+		/* Méthode à coder */	
 		
 		double averageValue = 0;
 		int r = 0;
